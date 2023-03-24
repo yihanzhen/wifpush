@@ -21,8 +21,8 @@ jobs:
           service_account: 'github-service-account@hanzhenyi-test-308600.iam.gserviceaccount.com'
       - uses: actions/checkout@v2
         with:
-          name: yihanzhen/artifact-registry-npm-tools
-          ref: refs/heads/skip-scope-check
+          repository: yihanzhen/artifact-registry-npm-tools
+          ref: skip-scope-check
           path: ./artifact-registry-npm-tools
       - run: ./artifact-registry-npm-tools/src/main
       - run: npm publish
