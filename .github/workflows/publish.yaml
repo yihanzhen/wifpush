@@ -24,5 +24,7 @@ jobs:
           repository: yihanzhen/artifact-registry-npm-tools
           ref: skip-scope-check
           path: ./artifact-registry-npm-tools
+      - run: npm install
+        working-directory: ./artifact-registry-npm-tools
       - run: ./artifact-registry-npm-tools/src/main.js
       - run: npm publish
