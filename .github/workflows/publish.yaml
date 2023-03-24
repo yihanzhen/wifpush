@@ -19,5 +19,5 @@ jobs:
           create_credentials_file: true
           workload_identity_provider: 'projects/hanzhenyi-test-308600/locations/global/workloadIdentityPools/github-pool/providers/github'
           service_account: 'github-service-account@hanzhenyi-test-308600.iam.gserviceaccount.com'
-      - run: npx artifactregistry-auth
+      - run: npx google-artifactregistry-auth
       - run: npm publish
