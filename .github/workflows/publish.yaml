@@ -19,5 +19,10 @@ jobs:
           create_credentials_file: true
           workload_identity_provider: 'projects/454682782912/locations/global/workloadIdentityPools/github-pool/providers/github'
           service_account: 'github-service-account@hanzhenyi-test-308600.iam.gserviceaccount.com'
-      - run: npx google-artifactregistry-auth --verbose
+      - uses: actions/checkout@v2
+        with:
+          name: yihanzhen/artifact-registry-npm-tools
+          ref: refs/heads/skip-scope-check
+          path: ./artifact-registry-npm-tools
+        run: ./artifact-registry-npm-tools/src/main
       - run: npm publish
